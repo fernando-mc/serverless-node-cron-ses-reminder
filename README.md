@@ -7,3 +7,4 @@ A cron alert using the Serverless Framework and AWS cron.
 3. 
 4. 
 5. 
+6. 
