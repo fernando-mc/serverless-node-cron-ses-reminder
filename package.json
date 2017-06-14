@@ -1,0 +1,7 @@
+{
+  "name": "cron-ses-reminder",
+  "version": "1.0.0",
+  "description": "A function that triggers using the serverless `schedule` event and then sends an AWS SES email reminder",
+  "author": "Fernando Medina Corey",
+  "license": "MIT"
+}

@@ -1,0 +1,17 @@
+service: cron-ses-reminder
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+
+functions:
+  cron:
+    handler: handler.run
+    events:
+      # Invoke the Lambda function every 3 days
+      - schedule: rate(3 days)
+  secondCron:
+    handler: handler.run
+    events:
+      # Invoke the Lambda function every weekend at 1pm US/Eastern Time
+      - schedule: cron(* 22 * * SAT-SUN *)
