@@ -19,5 +19,5 @@ functions:
     handler: handler.sendReminder
     events:
       # Invoke the Lambda function every weekend at 1pm US/Eastern Time
-      - schedule: cron(* 22 ? * SUN,SAT *)
+      - schedule: cron(30 22 ? * SUN,SAT *)
 
