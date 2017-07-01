@@ -8,10 +8,10 @@ module.exports.sendReminder = (event, context, callback) => {
     var fs = require('fs');
 
     var emailHtml = fs.readFileSync('./reminder.html', 'utf-8');
-
+    var toAndFromAdress = 'verifiedemail@yourdomain.com'
     var params = {
         Destination: {
-            ToAddresses: ["fmcorey@gmail.com"]
+            ToAddresses: [toAndFromAdress]
         },
         Message: {
             Body: {
@@ -29,8 +29,8 @@ module.exports.sendReminder = (event, context, callback) => {
                 Data: "Woof Garden Reminder"
             }
         },
-        ReplyToAddresses: ["fmcorey@gmail.com"],
-        Source: "fmcorey@gmail.com", 
+        ReplyToAddresses: [toAndFromAdress],
+        Source: toAndFromAdress, 
     };
 
     ses.sendEmail(params, function(err, data) {
@@ -40,8 +40,3 @@ module.exports.sendReminder = (event, context, callback) => {
         else callback(null, data);
     }); 
 };
-
-
-
-
-

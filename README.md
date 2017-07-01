@@ -32,10 +32,10 @@ For more information read the documention for the AWS cron expression syntax [he
 
 ## Deploy
 
-In order to deploy this code you simply run:
+In order to deploy this code and follow along with what's happening you simply run:
 
 ```bash
-serverless deploy
+serverless deploy -v 
 ```
 
-That's it! Seriously!
+That's it! Seriously! The `-v` will let you see the verbose output of what's happening behind the scenes.
