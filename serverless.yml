@@ -11,12 +11,12 @@ provider:
          - "*"
 functions:
   dailyReminder:
-    handler: handler.sendReminder
+    handler: handler.sendReminderDaily
     events:
       # Invoke the Lambda function everyday
       - schedule: rate(1 day)
   weekendReminder:
-    handler: handler.sendReminder
+    handler: handler.sendReminderWeekend
     events:
       # Invoke the Lambda function every weekend at 1pm US/Eastern Time
       - schedule: cron(30 22 ? * SUN,SAT *)
